@@ -1,4 +1,4 @@
-(function() {
+           (function() {
     'use strict';
 
     if (typeof WebSocket === 'undefined' || typeof DataView === 'undefined' ||
@@ -594,7 +594,7 @@
 
     const knownSkins = new Map();
     const loadedSkins = new Map();
-    const macroCooldown = 1000 / 7;
+    const macroCooldown = 0;
     const camera = {
         x: 0,
         y: 0,
