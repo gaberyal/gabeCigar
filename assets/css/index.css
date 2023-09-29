@@ -12,6 +12,9 @@ input[type=checkbox] {
 	cursor: pointer;
 }
 
+.text-muted {
+	color: rgba(255, 45, 45, 0.859);
+}
 #overlays, #connecting {
 	opacity: 0;
 	position: absolute;
