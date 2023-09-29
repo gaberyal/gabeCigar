@@ -35,7 +35,11 @@ input[type=checkbox] {
 	padding: 5px 15px;
 }
 
+.form-group {
+	color: white;
+}
 #title {
+	
 	padding: 10px;
 	text-align: center;
 }
@@ -61,7 +65,7 @@ input[type=checkbox] {
 
 #helloDialog {
 	width: 350px;
-	background-color: #fff;
+	background-color: #5555;
 	margin: 10px auto;
 	border-radius: 15px;
 	padding: 5px 15px 5px 15px;
