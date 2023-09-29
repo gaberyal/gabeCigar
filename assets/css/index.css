@@ -16,6 +16,10 @@ input[type=checkbox] {
 	color: rgba(255, 45, 45, 0.859);
 }
 
+#hate-msg {
+	color: grey;
+}
+
 #settings {
 	color: gray;
 }
