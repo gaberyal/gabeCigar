@@ -631,12 +631,12 @@
 
     const settings = {
         nick: '',
-        skin: '',
+        skin: 'gabe',
         gamemode: '',
         showSkins: true,
         showNames: true,
-        darkTheme: false,
-        showColor: true,
+        darkTheme: true,
+        showColor: false,
         showMass: false,
         _showChat: true,
         get showChat() {
@@ -650,7 +650,7 @@
         showMinimap: true,
         showPosition: false,
         showBorder: false,
-        showGrid: true,
+        showGrid: false,
         playSounds: false,
         soundsVolume: 0.5,
         moreZoom: false,
