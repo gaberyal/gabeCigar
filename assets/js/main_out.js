@@ -636,7 +636,7 @@
         showSkins: true,
         showNames: true,
         darkTheme: true,
-        showColor: false,
+        showColor: true,
         showMass: false,
         _showChat: true,
         get showChat() {
