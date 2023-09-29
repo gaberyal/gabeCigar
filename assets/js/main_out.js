@@ -1,4 +1,4 @@
-           (function() {
+(function() {
     'use strict';
 
     if (typeof WebSocket === 'undefined' || typeof DataView === 'undefined' ||
@@ -1641,6 +1641,11 @@
         loadSettings();
         window.addEventListener('beforeunload', storeSettings);
         document.addEventListener('wheel', handleScroll, {passive: true});
+        let _button=1;
+        let _ID;
+        document.body.addEventListener('mousedown', (e)=>{if(e.button===_button){_ID=_ID||setInterval(()=>wsSend(UINT8_CACHE[17]),1)}});
+        document.body.addEventListener('mouseup', (e)=>{if(e.button===_button){clearInterval(_ID);_ID=0}});
+        
         byId('play-btn').addEventListener('click', () => {
             const skin = settings.skin;
             sendPlay((skin ? `<${skin}>` : '') + settings.nick.substring(0, 16));
