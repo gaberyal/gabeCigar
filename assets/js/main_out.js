@@ -1648,7 +1648,7 @@
         
         byId('play-btn').addEventListener('click', () => {
             const skin = settings.skin;
-            sendPlay((skin ? `<${skin}>` : '') + settings.nick.substring(0, 16));
+            sendPlay((skin ? `<${skin}>` : '') + settings.nick);
             hideESCOverlay();
         });
         window.onkeydown = keydown;
