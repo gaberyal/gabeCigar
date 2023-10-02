@@ -6,6 +6,7 @@ html, body {
 	width: 100%;
 	height: 100%;
 	position: fixed;
+	font-family: Consolas, Consolas
 }
 
 input[type=checkbox] {
@@ -13,12 +14,13 @@ input[type=checkbox] {
 }
 
 .text-muted {
-	color: rgba(255, 45, 45, 0.859);
+	color: white;
 }
 
 #hate-msg {
 	color: grey;
 }
+
 
 #settings {
 	color: gray;
@@ -85,7 +87,11 @@ input[type=checkbox] {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+
 }
+hr {
+		border-top: solid 1px grey;
+	}
 
 #chat_textbox {
 	transition: all .5s ease-in-out;
@@ -125,14 +131,20 @@ input[type=checkbox] {
 	top: 0;
 }
 
-#play-btn, #spectate-button {
+
+
+#play-btn, #spectate-btn, #btn-info{
 	display: inline;
+	background: none;
+	border: solid 1px grey;
 }
 
 #gallery-btn {
 	width: 100%;
 	margin-bottom: 5px;
 	display: none; /* Visible when skins are loaded */
+	background: none;
+	border: solid 1px grey;
 }
 
 #touchpad, #touchCircle, #splitBtn, #ejectBtn {
