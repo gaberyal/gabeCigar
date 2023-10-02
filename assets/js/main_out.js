@@ -1649,6 +1649,13 @@
         document.body.addEventListener('mouseup', (e)=>{if(e.button===_button){clearInterval(_ID);_ID=0}});
         
         byId('play-btn').addEventListener('click', () => {
+            const secretCode = document.getElementById('code-secret').value;
+
+            if (secretCode !== "667") {
+                alert("Wrong secret code. You can not access the server.");
+                return;
+            }
+            
             const skin = settings.skin;
             sendPlay((skin ? `<${skin}>` : '') + settings.nick);
             hideESCOverlay();
