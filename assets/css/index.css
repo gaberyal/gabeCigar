@@ -12,6 +12,12 @@ html, body {
 input[type=checkbox] {
 	cursor: pointer;
 }
+.code-secret {
+	margin-top: 10px;
+	background: none;
+	color: #fff;
+	border-color: #fff
+}
 
 .text-muted {
 	color: white;
@@ -78,10 +84,12 @@ input[type=checkbox] {
 
 #helloDialog {
 	width: 350px;
-	background-color:#0004;
-	border: solid 1px;
+	background-color:#000c;
+	border: solid 1px #666;
+	border-top: none;
+	border-bottom: none;
 	margin: 10px auto;
-	border-radius: 15px;
+	border-radius: 30px;
 	padding: 5px 15px 5px 15px;
 	position: absolute;
 	top: 50%;
@@ -133,12 +141,13 @@ hr {
 
 
 
-#play-btn, #spectate-btn, #btn-info, #gallery-btn{
+.btn{
 	display: inline;
 	background: none;
 	border: solid 1px grey;
 	&:hover {
 		border: solid 1px white;
+		background: #fff1;
 	}
 }
 
