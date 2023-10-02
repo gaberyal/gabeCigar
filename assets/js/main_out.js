@@ -219,6 +219,7 @@
     }
 
     const WEBSOCKET_URL = null;
+    const LOCAL_SKIN_URL = './skins/';
     const SKIN_URL = 'https://emupedia.net/emupedia-game-agar.io/cigar2/skins/';
     const USE_HTTPS = 'https:' === window.location.protocol || window.location.hostname === 'localhost';
     const EMPTY_NAME = 'An unnamed cell';
@@ -1350,6 +1351,7 @@
                 return;
             }
             const skin = new Image();
+            skin.src = `${LOCAL_SKIN_URL}${this.skin}.png`;
             skin.src = `${SKIN_URL}${this.skin}.png`;
             loadedSkins.set(this.skin, skin);
         }
