@@ -133,18 +133,19 @@ hr {
 
 
 
-#play-btn, #spectate-btn, #btn-info{
+#play-btn, #spectate-btn, #btn-info, #gallery-btn{
 	display: inline;
 	background: none;
 	border: solid 1px grey;
+	&:hover {
+		border: solid 1px white;
+	}
 }
 
 #gallery-btn {
 	width: 100%;
 	margin-bottom: 5px;
 	display: none; /* Visible when skins are loaded */
-	background: none;
-	border: solid 1px grey;
 }
 
 #touchpad, #touchCircle, #splitBtn, #ejectBtn {
