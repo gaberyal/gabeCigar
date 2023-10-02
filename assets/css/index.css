@@ -12,7 +12,7 @@ html, body {
 input[type=checkbox] {
 	cursor: pointer;
 }
-.code-secret {
+#code-secret {
 	margin-top: 10px;
 	background: none;
 	color: #fff;

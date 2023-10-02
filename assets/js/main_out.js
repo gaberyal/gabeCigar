@@ -1655,7 +1655,7 @@
                 alert("Wrong secret code. You can not access the server.");
                 return;
             }
-            
+
             const skin = settings.skin;
             sendPlay((skin ? `<${skin}>` : '') + settings.nick);
             hideESCOverlay();
