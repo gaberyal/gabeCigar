@@ -759,6 +759,12 @@
             c += `<h4 class="skinName">${skin}</h4>`;
             c += '</li>';
         }
+        for (const skin of sortedSkins) {
+            c += `<li class="skin" onclick="changeSkin('${skin}')">`;
+            c += `<img class="circular" src="skins/${skin}.png">`;
+            c += `<h4 class="skinName">${skin}</h4>`;
+            c += '</li>';
+        }
         byId('gallery-body').innerHTML = `<ul id="skinsUL">${c}</ul>`;
     }
 
