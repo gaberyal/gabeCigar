@@ -1356,9 +1356,9 @@
             if (this.skin === null /*|| !knownSkins.has(this.skin)*/ || loadedSkins.has(this.skin)) {
                 return;
             }
-            const skin = new Image();
-            skin.src = `${LOCAL_SKIN_URL}${this.skin}.png`;
+            const skin = new Image();     
             skin.src = `${SKIN_URL}${this.skin}.png`;
+            skin.src = `${LOCAL_SKIN_URL}${this.skin}.png`;
             loadedSkins.set(this.skin, skin);
         }
         setColor(value) {
