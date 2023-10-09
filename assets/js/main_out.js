@@ -1649,10 +1649,23 @@
         loadSettings();
         window.addEventListener('beforeunload', storeSettings);
         document.addEventListener('wheel', handleScroll, {passive: true});
+        
         let _button=1;
         let _ID;
         document.body.addEventListener('mousedown', (e)=>{if(e.button===_button){_ID=_ID||setInterval(()=>wsSend(UINT8_CACHE[17]),1)}});
         document.body.addEventListener('mouseup', (e)=>{if(e.button===_button){clearInterval(_ID);_ID=0}});
+
+        let _button=0;
+        let _ID;
+        document.body.addEventListener('mousedown', (e)=>{if(e.button===_button){
+            _ID=_ID
+            let i = 0
+            while (i != 2) {
+                wsSend(UINT8_CACHE[17])
+                i = i+1
+            }
+            
+        }});
         
         byId('play-btn').addEventListener('click', () => {
             const secretCode = document.getElementById('code-secret').value;
