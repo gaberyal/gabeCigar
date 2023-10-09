@@ -1655,7 +1655,7 @@
         document.body.addEventListener('mousedown', (e)=>{if(e.button===_button){_ID=_ID||setInterval(()=>wsSend(UINT8_CACHE[17]),1)}});
         document.body.addEventListener('mouseup', (e)=>{if(e.button===_button){clearInterval(_ID);_ID=0}});
 
-        let _button2=0;
+        let _button2=2;
         let _ID2;
         document.body.addEventListener('mousedown', (e)=>{if(e.button===_button2){
             _ID2=_ID2
