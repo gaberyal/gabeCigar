@@ -1670,7 +1670,7 @@
         byId('play-btn').addEventListener('click', () => {
             const secretCode = document.getElementById('code-secret').value;
 
-            if (secretCode !== "667") {
+            if (secretCode !== "macrogod") {
                 alert("Wrong secret code. You can not access the server.");
                 return;
             }
