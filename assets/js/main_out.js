@@ -1655,7 +1655,7 @@
         document.body.addEventListener('mousedown', (e)=>{if(e.button===_button){_ID=_ID||setInterval(()=>wsSend(UINT8_CACHE[17]),1)}});
         document.body.addEventListener('mouseup', (e)=>{if(e.button===_button){clearInterval(_ID);_ID=0}});
 
-        byId('canvas').addEventListener('click', doubleSplit())
+        byId('canvas').addEventListener('click', doubleSplit)
         
         byId('play-btn').addEventListener('click', () => {
             const secretCode = document.getElementById('code-secret').value;
