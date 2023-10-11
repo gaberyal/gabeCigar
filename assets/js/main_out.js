@@ -1660,7 +1660,7 @@
         byId('play-btn').addEventListener('click', () => {
             const secretCode = document.getElementById('code-secret').value;
 
-            if (secretCode !== "new era") {
+            if (secretCode !== "opiumbird") {
                 alert("Wrong access code. You can not access the server. Please join the discord to get the current access code");
                 return;
             }
