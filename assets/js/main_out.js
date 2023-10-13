@@ -1772,12 +1772,13 @@
     window.addEventListener('DOMContentLoaded', init);
 
     function doubleSplit() {
-        let _ID2;
+        return 0;
+        /*let _ID2;
         _ID2=_ID2
         let i = 0
         while (i != 2) {
             wsSend(UINT8_CACHE[17])
             i = i+1
-        }
+        }*/
     }
 })();
