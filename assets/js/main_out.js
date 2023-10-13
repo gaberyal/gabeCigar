@@ -1357,10 +1357,10 @@
                 return;
             }
             const skin = new Image();
-            const localSkinsLst = ["whiteDragon"];
+            const localSkinsLst = ["alien_dance"];
             
             if (localSkinsLst.includes(this.skin)) {
-                skin.src = `${LOCAL_SKIN_URL}${this.skin}.png`;
+                skin.src = `${LOCAL_SKIN_URL}${this.skin}.gif`;
             }
             else {
                 skin.src = `${SKIN_URL}${this.skin}.png`;  
