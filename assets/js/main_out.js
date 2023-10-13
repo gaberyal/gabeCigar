@@ -1357,8 +1357,21 @@
                 return;
             }
             const skin = new Image();
-            skin.src = `${LOCAL_SKIN_URL}${this.skin}.png`;
-            skin.src = `${SKIN_URL}${this.skin}.png`;       
+            
+            const fs = require("fs"); // Or `import fs from "fs";` with ESM
+            if (fs.existsSync(path)) {
+                // Do something
+            }
+
+            const localSkinsLst = ["whiteDragon"];
+            
+            if (localSkinsLst.includes(this.skin)) {
+                skin.src = `${LOCAL_SKIN_URL}${this.skin}.png`;
+            }
+            else {
+                skin.src = `${SKIN_URL}${this.skin}.png`;  
+            }
+                 
             loadedSkins.set(this.skin, skin);
         }
         setColor(value) {
