@@ -761,7 +761,7 @@
         }
         for (const skin of sortedSkins) {
             c += `<li class="skin" onclick="changeSkin('${skin}')">`;
-            c += `<img class="circular" src="skins/${skin}.png">`;
+            c += `<img class="circular" src="./skins/${skin}.png">`;
             c += `<h4 class="skinName">${skin}</h4>`;
             c += '</li>';
         }
