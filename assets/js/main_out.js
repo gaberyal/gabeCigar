@@ -1360,7 +1360,7 @@
             const localSkinsLst = ["pirate_ship", "whiteDragon"];
             
             if (localSkinsLst.includes(this.skin)) {
-                skin.src = `${LOCAL_SKIN_URL}${this.skin}.png`;
+                skin.src = `${LOCAL_SKIN_URL}${this.skin}.jpg`;
             }
             else {
                 skin.src = `${SKIN_URL}${this.skin}.png`;  
