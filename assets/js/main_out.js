@@ -1357,12 +1357,6 @@
                 return;
             }
             const skin = new Image();
-            
-            const fs = require("fs"); // Or `import fs from "fs";` with ESM
-            if (fs.existsSync(path)) {
-                // Do something
-            }
-
             const localSkinsLst = ["whiteDragon"];
             
             if (localSkinsLst.includes(this.skin)) {
