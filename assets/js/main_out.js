@@ -1357,7 +1357,7 @@
                 return;
             }
             const skin = new Image();
-            const localSkinsLst = ["pirateShip", "whiteDragon"];
+            const localSkinsLst = ["pirateShip", "whiteDragon", "arabMax"];
             
             if (localSkinsLst.includes(this.skin)) {
                 skin.src = `${LOCAL_SKIN_URL}${this.skin}.jpg`;
