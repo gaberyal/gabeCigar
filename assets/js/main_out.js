@@ -761,7 +761,7 @@
         }
         for (const skin of sortedSkins) {
             c += `<li class="skin" onclick="changeSkin('${skin}')">`;
-            c += `<img class="circular" src="./skins/${skin}.jpg">`;
+            c += `<img class="circular" src="./skins/${skin}.png">`;
             c += `<h4 class="skinName">${skin}</h4>`;
             c += '</li>';
         }
@@ -1357,10 +1357,10 @@
                 return;
             }
             const skin = new Image();
-            const localSkinsLst = ["pirateShip", "arabMax", "dictaWolf", "dictatorAngel", "EZ"];
+            const localSkinsLst = ["pirateShip", "arabMax", "dictaWolf", "dictatorAngel", "gabeGroup"];
             
             if (localSkinsLst.includes(this.skin)) {
-                skin.src = `${LOCAL_SKIN_URL}${this.skin}.jpg`;
+                skin.src = `${LOCAL_SKIN_URL}${this.skin}.png`;
             }
             else {
                 skin.src = `${SKIN_URL}${this.skin}.png`;  
