@@ -658,6 +658,7 @@
         fillSkin: true,
         backgroundSectors: false,
         jellyPhysics: true,
+        doubleSplit: false,
     };
     const pressed = {
         ' ': false,
@@ -1779,13 +1780,17 @@
     window.addEventListener('DOMContentLoaded', init);
 
     function doubleSplit() {
-        return 0;
-        /*let _ID2;
-        _ID2=_ID2
-        let i = 0
-        while (i != 2) {
-            wsSend(UINT8_CACHE[17])
-            i = i+1
-        }*/
+        if (!settings.doubleSplit) {
+            return 0;
+        }
+        else {
+            let _ID2;
+            _ID2=_ID2
+            let i = 0
+            while (i != 2) {
+                wsSend(UINT8_CACHE[17])
+                i = i+1
+            }
+        }
     }
 })();
