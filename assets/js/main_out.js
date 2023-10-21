@@ -1667,7 +1667,7 @@
         byId('play-btn').addEventListener('click', () => {
             const secretCode = document.getElementById('code-secret').value;
 
-            if (secretCode !== "2024/5") {
+            if (secretCode !== "illness") {
                 alert("Wrong access code. You can not access the server. Please join the discord to get the current access code");
                 return;
             }
