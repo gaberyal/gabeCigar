@@ -634,6 +634,7 @@
         nick: '',
         skin: 'gabe',
         gamemode: '',
+        accessCode: '',
         showSkins: true,
         showNames: true,
         darkTheme: true,
@@ -1666,9 +1667,9 @@
         byId('canvas').addEventListener('click', doubleSplit)
         
         byId('play-btn').addEventListener('click', () => {
-            const secretCode = document.getElementById('code-secret').value;
+            const accessCode = document.getElementById('accessCode').value;
 
-            if (secretCode !== "illness") {
+            if (accessCode !== "illness") {
                 alert("Wrong access code. You can not access the server. Please join the discord to get the current access code");
                 return;
             }
