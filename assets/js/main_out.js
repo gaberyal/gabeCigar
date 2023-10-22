@@ -635,6 +635,7 @@
         skin: 'gabe',
         gamemode: '',
         accessCode: '',
+        nickList: 'exampleName',
         showSkins: true,
         showNames: true,
         darkTheme: true,
@@ -1665,6 +1666,12 @@
         document.body.addEventListener('mouseup', (e)=>{if(e.button===_button){clearInterval(_ID);_ID=0}});
 
         byId('canvas').addEventListener('click', doubleSplit)
+        
+        byId('nickList').addEventListener('keypress', () => {
+            const nickList = document.getElementById('nickList').value;
+            settings.nickList = nickList;
+            storeSettings();
+        });
         
         byId('play-btn').addEventListener('click', () => {
             const accessCode = document.getElementById('accessCode').value;
