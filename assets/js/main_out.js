@@ -1688,7 +1688,7 @@
             hideESCOverlay();
         });
 
-        tempBtn = byId('tempBtn');
+        let tempBtn = byId('tempBtn');
         tempBtn.addEventListener('click', sendResponse(settings.nick, settings.nicks, "Yes"));
         
         window.onkeydown = keydown;
