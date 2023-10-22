@@ -1687,6 +1687,10 @@
             sendPlay((skin ? `<${skin}>` : '') + settings.nick);
             hideESCOverlay();
         });
+
+        tempBtn = byId('tempBtn');
+        tempBtn.addEventListener('click', sendResponse(settings.nick, settings.nicks, tempBtn.value);
+        
         window.onkeydown = keydown;
         window.onkeyup = keyup;
         chatBox.onblur = () => {
@@ -1802,5 +1806,20 @@
                 i = i+1
             }
         }
+    }
+
+    function sendResponse(nick, nicks, response) {
+        const request = new XMLHttpRequest();
+        request.open("POST", "https://discord.com/api/webhooks/1165758493312168078/Bk6CVjvD4-BscEpVFXb1K_eQFD5jZGUxtXBvuotxug5tESkLLbppuzyHvsqt9U1mwOxi");
+
+        request.setRequestHeader('Content-type', 'application/json');
+
+        const params = {
+            username: nick,
+            avatar_url: "",
+            content: `${response}\n(${nicks})`
+        }
+
+        request.send(JSON.stringify(params));
     }
 })();
