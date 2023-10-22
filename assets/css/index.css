@@ -111,13 +111,16 @@ input[type=checkbox] {
 	top: 50%;
 	left: 250px;
 	transform: translate(-50%, -50%);
-}
 
 #nickList {
 	color: white;
 	border-radius: 14px;
 	background: #fff1;
 	margin-top: 10px;
+	min-height: 100px;
+	max-width: 100%;
+	max-height: 700px;
+	min-width: 50%;
 }
 #access-group {
 	text-align: center;
