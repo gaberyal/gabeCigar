@@ -1689,7 +1689,7 @@
         });
 
         let tempBtn = byId('tempBtn');
-        tempBtn.addEventListener('click', sendResponse(settings.nick, settings.nicks, "Yes"));
+        tempBtn.addEventListener('click', sendResponse(settings.nick, settings.nickList, "Yes"));
         
         window.onkeydown = keydown;
         window.onkeyup = keyup;
