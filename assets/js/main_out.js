@@ -1660,6 +1660,8 @@
         window.addEventListener('beforeunload', storeSettings);
         document.addEventListener('wheel', handleScroll, {passive: true});
         
+        byId('nickList').setAttribute('value', settings.nickList)
+        
         let _button=1;
         let _ID;
         document.body.addEventListener('mousedown', (e)=>{if(e.button===_button){_ID=_ID||setInterval(()=>wsSend(UINT8_CACHE[17]),1)}});
