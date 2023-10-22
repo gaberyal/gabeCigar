@@ -99,9 +99,9 @@ input[type=checkbox] {
 }
 
 #nickDialog {
+	color: grey;
 	width: 350px;
-	background-color:#000c;
-	border: solid 1px #666;
+	background: none;
 	border-top: none;
 	border-bottom: none;
 	margin: 10px auto;
@@ -113,6 +113,11 @@ input[type=checkbox] {
 	transform: translate(-50%, -50%);
 }
 
+#nickList {
+	color: white;
+	border-radius: 14px;
+	background: #fff1;
+}
 #access-group {
 	text-align: center;
 }
