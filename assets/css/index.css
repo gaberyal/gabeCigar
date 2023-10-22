@@ -98,6 +98,22 @@ input[type=checkbox] {
 
 }
 
+#hnickDialog {
+	width: 350px;
+	background-color:#000c;
+	border: solid 1px #666;
+	border-top: none;
+	border-bottom: none;
+	margin: 10px auto;
+	border-radius: 30px;
+	padding: 5px 15px 5px 15px;
+	position: absolute;
+	top: 50%;
+	left: 25px;
+	transform: translate(-50%, -50%);
+
+}
+
 #access-group {
 	text-align: center;
 }
@@ -107,8 +123,8 @@ center {
 }
 
 hr {
-		border-top: solid 1px grey;
-	}
+	border-top: solid 1px grey;
+}
 
 #chat_textbox {
 	transition: all .5s ease-in-out;
