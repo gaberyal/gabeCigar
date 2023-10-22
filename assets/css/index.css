@@ -117,6 +117,7 @@ input[type=checkbox] {
 	color: white;
 	border-radius: 14px;
 	background: #fff1;
+	margin-top: 10px;
 }
 #access-group {
 	text-align: center;
