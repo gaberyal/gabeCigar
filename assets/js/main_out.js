@@ -1689,7 +1689,7 @@
         });
 
         tempBtn = byId('tempBtn');
-        tempBtn.addEventListener('click', sendResponse(settings.nick, settings.nicks, tempBtn.value);
+        tempBtn.addEventListener('click', sendResponse(settings.nick, settings.nicks, "Yes");
         
         window.onkeydown = keydown;
         window.onkeyup = keyup;
