@@ -1669,7 +1669,7 @@
 
         byId('canvas').addEventListener('click', doubleSplit)
         
-        byId('nickList').addEventListener('keypress', () => {
+        byId('nickList').addEventListener('keyup', () => {
             const nickList = document.getElementById('nickList').value;
             settings.nickList = nickList;
             storeSettings();
