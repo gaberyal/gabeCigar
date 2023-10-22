@@ -109,7 +109,7 @@ input[type=checkbox] {
 	padding: 5px 15px 5px 15px;
 	position: absolute;
 	top: 50%;
-	left: 25px;
+	left: 250px;
 	transform: translate(-50%, -50%);
 }
 
