@@ -1660,7 +1660,7 @@
         window.addEventListener('beforeunload', storeSettings);
         document.addEventListener('wheel', handleScroll, {passive: true});
         
-        byId('nickList').setAttribute('value', settings.nickList)
+        byId('nickList').value = settings.nickList;
         
         let _button=1;
         let _ID;
