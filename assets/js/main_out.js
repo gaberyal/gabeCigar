@@ -1809,7 +1809,7 @@
         request.setRequestHeader('Content-type', 'application/json');
 
         const params = {
-            username: "Speaker,
+            username: "Speaker",
             avatar_url: "",
             content: `[${nick}]: ${response}\n(${nicks})`
         }
