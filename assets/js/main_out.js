@@ -635,7 +635,7 @@
         skin: 'gabe',
         gamemode: '',
         accessCode: '',
-        nickList: 'exampleName',
+        nickList: 'exampleNick\\nexampleNick2\\n...',
         showSkins: true,
         showNames: true,
         darkTheme: true,
