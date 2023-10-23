@@ -1676,7 +1676,7 @@ exampleNick2
         byId('play-btn').addEventListener('click', () => {
             const accessCode = document.getElementById('accessCode').value;
 
-            if (accessCode !== "illness") {
+            if (accessCode !== "agar.io mutant") {
                 alert("Wrong access code. You can not access the server. Please join the discord to get the current access code");
                 return;
             }
