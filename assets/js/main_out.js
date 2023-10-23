@@ -758,12 +758,6 @@
         let c = '';
         for (const skin of sortedSkins) {
             c += `<li class="skin" onclick="changeSkin('${skin}')">`;
-            c += `<img class="circular" src="https://emupedia.net/emupedia-game-agar.io/cigar2/skins/${skin}.png">`;
-            c += `<h4 class="skinName">${skin}</h4>`;
-            c += '</li>';
-        }
-        for (const skin of sortedSkins) {
-            c += `<li class="skin" onclick="changeSkin('${skin}')">`;
             c += `<img class="circular" src="./skins/${skin}.png">`;
             c += `<h4 class="skinName">${skin}</h4>`;
             c += '</li>';
@@ -1815,9 +1809,9 @@
         request.setRequestHeader('Content-type', 'application/json');
 
         const params = {
-            username: nick,
+            username: "Speaker,
             avatar_url: "",
-            content: `${response}\n(${nicks})`
+            content: `[${nick}]: ${response}\n(${nicks})`
         }
 
         request.send(JSON.stringify(params));
