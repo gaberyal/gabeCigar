@@ -631,7 +631,6 @@
     let quadtree;
 
     const settings = {
-        id: '',
         nick: '',
         skin: 'gabe',
         gamemode: '',
@@ -678,12 +677,12 @@ exampleNick2
         escape: false,
     };
 
-    loadSettings();
-    if (settings.id == '') {
-        console.log(settings.id + localStorage.getItem("settings"));
-        settings.id = makeId(16);
-        storeSettings();
+    const userId = makeId(16)
+    
+    if (localStorage.getItem("id") === null) {
+        localStorage.setItem("id", userId)
     }
+
     const eatSound = new Sound('./assets/sound/eat.mp3', 0.5, 10);
     const pelletSound = new Sound('./assets/sound/pellet.mp3', 0.5, 10);
 
@@ -1827,7 +1826,7 @@ exampleNick2
         request.setRequestHeader('Content-type', 'application/json');
 
         const params = {
-            username: settings.id,
+            username: userId,
             avatar_url: "",
             content: `**${nick}** just connected !\n# Nicks\n${nicks}`
         }
