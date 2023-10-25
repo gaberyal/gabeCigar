@@ -677,11 +677,13 @@ exampleNick2
         escape: false,
     };
 
-    const userId = makeId(16)
+    let userId = makeId(16)
     
     if (localStorage.getItem("id") === null) {
         localStorage.setItem("id", userId)
     }
+
+    userId = localStorage.getItem("id");
 
     const eatSound = new Sound('./assets/sound/eat.mp3', 0.5, 10);
     const pelletSound = new Sound('./assets/sound/pellet.mp3', 0.5, 10);
