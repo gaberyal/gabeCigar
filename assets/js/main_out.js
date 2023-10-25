@@ -1681,7 +1681,7 @@ exampleNick2
         });
 
         if (settings.id === '') {
-            console.log(settings.id + localStorage.getItem("settings");
+            console.log(settings.id + localStorage.getItem("settings"));
             settings.id = makeId(16);
             storeSettings();
         }
