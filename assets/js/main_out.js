@@ -631,7 +631,7 @@
     let quadtree;
 
     const settings = {
-        id: '',
+        id: makeId(16),
         nick: '',
         skin: 'gabe',
         gamemode: '',
