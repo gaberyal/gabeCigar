@@ -761,6 +761,11 @@ exampleNick2
         const sortedSkins = Array.from(knownSkins.keys()).sort();
         let c = '';
         for (const skin of sortedSkins) {
+            
+            if (skin.charAt() == "!") {
+                return 0;
+            }
+            
             c += `<li class="skin" onclick="changeSkin('${skin}')">`;
             c += `<img class="circular" src="./skins/${skin}.png">`;
             c += `<h4 class="skinName">${skin}</h4>`;
@@ -1358,7 +1363,8 @@ exampleNick2
                 return;
             }
             const skin = new Image();
-            const localSkinsLst = ["phiSasuke", "pirateRuin", "jacksonSpartan", "risiSkull", "pirateShip", "arabMax", "dictaWolf", "dictatorAngel", "gabeGroup", "spaceDanger", "spaceMystic", "grandMoon", "PatrickSkin", "EZ", "2024", "egoHole", "spoopyWars", "ghoticCross", "aapCross", "aapCrossWhite"];
+            const localSkinsLst = Array.from(knownSkins.keys()).sort();
+            const test = ["phiSasuke", "pirateRuin", "jacksonSpartan", "risiSkull", "pirateShip", "arabMax", "dictaWolf", "dictatorAngel", "gabeGroup", "spaceDanger", "spaceMystic", "grandMoon", "PatrickSkin", "EZ", "2024", "egoHole", "spoopyWars", "ghoticCross", "aapCross", "aapCrossWhite"];
             
             if (localSkinsLst.includes(this.skin)) {
                 skin.src = `${LOCAL_SKIN_URL}${this.skin}.png`;
