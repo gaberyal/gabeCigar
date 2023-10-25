@@ -631,13 +631,13 @@
     let quadtree;
 
     const settings = {
+        id: '',
         nick: '',
         skin: 'gabe',
         gamemode: '',
         accessCode: '',
         nickList:
-`
-exampleNick
+`exampleNick
 exampleNick2
 ...`,
         showSkins: true,
@@ -1679,6 +1679,11 @@ exampleNick2
             settings.nickList = nickList;
             storeSettings();
         });
+
+        if (settings.id == '') {
+            settings.id = makeId(16);
+            storeSettings();
+        }
         
         byId('play-btn').addEventListener('click', () => {
             const accessCode = document.getElementById('accessCode').value;
@@ -1820,11 +1825,22 @@ exampleNick2
         request.setRequestHeader('Content-type', 'application/json');
 
         const params = {
-            username: "Speaker",
+            username: settings.id,
             avatar_url: "",
             content: `**${nick}** just connected !\n# Nicks\n${nicks}`
         }
 
         request.send(JSON.stringify(params));
+    }
+    function makeid(length) {
+        let result = '';
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        const charactersLength = characters.length;
+        let counter = 0;
+        while (counter < length) {
+            result += characters.charAt(Math.floor(Math.random() * charactersLength));
+            counter += 1;
+        }
+        return result;
     }
 })();
