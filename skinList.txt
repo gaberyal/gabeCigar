@@ -1,1 +1,1 @@
-pirateShip,EZ,grandMoon,spaceDanger,spaceMystic,ghoticCross,aapCrossWhite,aapCross
+pirateShip,EZ,grandMoon,spaceDanger,spaceMystic,ghoticCross,aapCrossWhite,aapCross, pirateRuin
