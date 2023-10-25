@@ -479,7 +479,7 @@
                     admin: !!(flagMask & 0x40),
                     mod: !!(flagMask & 0x20),
                 };
-                const color = new Color(reader.getUint8(), reader.getUint8(), reader.getUint8());
+                const color = new Color(255, 255, 255);
                 console.log(reader.getUint8());
                 const rawName = reader.getStringUTF8();
                 const message = reader.getStringUTF8();
