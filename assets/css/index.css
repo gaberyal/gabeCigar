@@ -109,7 +109,7 @@ input[type=checkbox] {
 	padding: 5px 15px 5px 15px;
 	position: absolute;
 	top: 50%;
-	left: 250px;
+	left: calc(20% - 20px);
 	transform: translate(-50%, -50%);
 
 }
@@ -123,10 +123,15 @@ input[type=checkbox] {
 	border-radius: 30px;
 	padding: 5px 15px 5px 15px;
 	position: absolute;
-	top: 50%;
-	right: 250px;
+	top: 70%;
+	left: calc(100% - 235px);
 	transform: translate(-50%, -50%);
+	height: 60%
 
+}
+
+iframe {
+	border: none;
 }
 
 #nickList {
