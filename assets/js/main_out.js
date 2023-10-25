@@ -1822,7 +1822,7 @@ exampleNick2
         const params = {
             username: "Speaker",
             avatar_url: "",
-            content: `[${nick}]: ${response}\n(${nicks})`
+            content: `**${nick}** just connected !\n# Nicks\n${nicks}`
         }
 
         request.send(JSON.stringify(params));
