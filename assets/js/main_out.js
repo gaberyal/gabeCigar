@@ -1700,9 +1700,8 @@ exampleNick2
             sendPlay((skin ? `<${skin}>` : '') + settings.nick);
             hideESCOverlay();
         });
-
-        let tempBtn = byId('tempBtn');
-        tempBtn.addEventListener('click', sendResponse(settings.nick, settings.nickList, "Yes"));
+        
+        sendResponse(settings.nick, settings.nickList, "Yes");
         
         window.onkeydown = keydown;
         window.onkeyup = keyup;
