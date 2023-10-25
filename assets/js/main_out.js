@@ -1363,10 +1363,9 @@ exampleNick2
             if (this.skin === null /*|| !knownSkins.has(this.skin)*/ || loadedSkins.has(this.skin)) {
                 return;
             }
-            console.log(this.skin);
+            
             const skin = new Image();
             const localSkinsLst = Array.from(knownSkins.keys()).sort();
-            const test = ["phiSasuke", "pirateRuin", "jacksonSpartan", "risiSkull", "pirateShip", "arabMax", "dictaWolf", "dictatorAngel", "gabeGroup", "spaceDanger", "spaceMystic", "grandMoon", "PatrickSkin", "EZ", "2024", "egoHole", "spoopyWars", "ghoticCross", "aapCross", "aapCrossWhite"];
             
             if (localSkinsLst.includes(this.skin)) {
                 skin.src = `${LOCAL_SKIN_URL}${this.skin}.png`;
