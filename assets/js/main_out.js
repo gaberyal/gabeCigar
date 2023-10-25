@@ -1680,7 +1680,8 @@ exampleNick2
             storeSettings();
         });
 
-        if (settings.id == '') {
+        if (settings.id === '') {
+            console.log(settings.id + localStorage.getItem("settings");
             settings.id = makeId(16);
             storeSettings();
         }
