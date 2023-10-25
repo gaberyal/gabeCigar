@@ -631,7 +631,7 @@
     let quadtree;
 
     const settings = {
-        id: makeId(16),
+        id: '',
         nick: '',
         skin: 'gabe',
         gamemode: '',
@@ -678,6 +678,11 @@ exampleNick2
         escape: false,
     };
 
+    if (settings.id === '') {
+        console.log(settings.id + localStorage.getItem("settings"));
+        settings.id = makeId(16);
+        storeSettings();
+    }
     const eatSound = new Sound('./assets/sound/eat.mp3', 0.5, 10);
     const pelletSound = new Sound('./assets/sound/pellet.mp3', 0.5, 10);
 
@@ -1680,11 +1685,6 @@ exampleNick2
             storeSettings();
         });
 
-        if (settings.id === '') {
-            console.log(settings.id + localStorage.getItem("settings"));
-            settings.id = makeId(16);
-            storeSettings();
-        }
         
         byId('play-btn').addEventListener('click', () => {
             const accessCode = document.getElementById('accessCode').value;
