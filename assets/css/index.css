@@ -114,6 +114,21 @@ input[type=checkbox] {
 
 }
 
+#cojarchyChat {
+	width: 500px;
+	background: none;
+	border-top: none;
+	border-bottom: none;
+	margin: 10px auto;
+	border-radius: 30px;
+	padding: 5px 15px 5px 15px;
+	position: absolute;
+	top: 50%;
+	right: 250px;
+	transform: translate(-50%, -50%);
+
+}
+
 #nickList {
 	color: white;
 	border-radius: 14px;
