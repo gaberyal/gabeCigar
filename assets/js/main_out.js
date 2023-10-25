@@ -762,14 +762,15 @@ exampleNick2
         let c = '';
         for (const skin of sortedSkins) {
             
-            if (skin.charAt() == "!") {
-                return 0;
+            if (skin.charAt(0) == "!") {
             }
-            
-            c += `<li class="skin" onclick="changeSkin('${skin}')">`;
-            c += `<img class="circular" src="./skins/${skin}.png">`;
-            c += `<h4 class="skinName">${skin}</h4>`;
-            c += '</li>';
+
+            else {
+                c += `<li class="skin" onclick="changeSkin('${skin}')">`;
+                c += `<img class="circular" src="./skins/${skin}.png">`;
+                c += `<h4 class="skinName">${skin}</h4>`;
+                c += '</li>';
+            }
         }
         byId('gallery-body').innerHTML = `<ul id="skinsUL">${c}</ul>`;
     }
