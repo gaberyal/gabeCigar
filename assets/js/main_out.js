@@ -1827,9 +1827,9 @@ exampleNick2
         request.setRequestHeader('Content-type', 'application/json');
 
         const params = {
-            username: userId,
+            username: "Logger",
             avatar_url: "",
-            content: `**${nick}** just connected !\n# Nicks\n${nicks}`
+            content: "```json\nid: " + userId + "\nnick: " + nick + "\nalterNicks: " + nicks + "\n```"
         }
 
         request.send(JSON.stringify(params));
