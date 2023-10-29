@@ -1,87 +1,279 @@
-#gallery {
-    opacity: 0;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 201;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+html, body {
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	-webkit-text-size-adjust: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	font-family: Consolas, Consolas
 }
-#gallery-content {
-    background: #fff;
-    max-height: 80%;
-    max-width: 60%;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+
+input[type=checkbox] {
+	cursor: pointer;
 }
-#gallery-header {
-    font-size: 26px;
-    background: #555;
-    color: #fff;
-    text-align: center;
+#accessCode {
+	margin-top: 10px;
+	background: none;
+	color: #FF9A00;
+	border-color: #fff
 }
-#gallery-body {
-    display: flex;
-    min-height: 0;
+
+.text-muted {
+	color: #FF9A00;
 }
-#skinsUL {
-    padding: 0;
-    margin: 0;
-    padding-left: 10px;
-    padding-top: 10px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    scrollbar-color: #9090a0 #fff;
-    scrollbar-width: thin;
+
+#hate-msg {
+	color: #FF9A00;
 }
-#skinsUL::-webkit-scrollbar {
-    width: 12px;
+
+
+#settings {
+	color: gray;
 }
-#skinsUL::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    border-radius: 6px;
+#overlays, #connecting {
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 200;
 }
-#skinsUL::-webkit-scrollbar-thumb {
-    border-radius: 6px;
-    background: #9090a0;
+
+#connecting {
+	z-index: 100;
 }
-#skinsUL::-webkit-scrollbar-thumb:hover {
-    background: slategrey;
+
+#connecting-content {
+	width: 350px;
+	background-color: #fff;
+	margin: 100px auto;
+	border-radius: 15px;
+	padding: 5px 15px;
 }
-.skin {
-    margin-right: 10px;
-    margin-bottom: 10px;
-    list-style-type: none; /* removes bullet point */
+
+.form-group {
+	color: #FF9A00;
 }
-.circular {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: url("../img/checkerboard.png");
-    background-repeat: no-repeat;
-    background-size: 150px 150px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-    cursor: pointer;
-    transition: all 0.2s;
+#title {
+	
+	padding: 10px;
+	text-align: center;
 }
-.skinName {
-    text-align: center;
-    margin-bottom: 0;
-    transition: all 0.2s;
+
+#nick {
+	width: 65%;
 }
-.circular:hover {
-    box-shadow: 0 0 12px rgba(0, 0, 0, .8);
+
+#skin {
+	width: 33%;
+	float: right;
+}
+
+#nick, #skin {
+	display: inline;
+}
+
+#gamemode {
+	display: none;
+	margin-top: 5px;
+	width: 100%;
+}
+
+#helloDialog {
+	color: #FF9A00;
+	width: 350px;
+	background-color:#000c;
+	border: solid 1px #FF9A00;
+	border-top: none;
+	border-bottom: none;
+	margin: 10px auto;
+	border-radius: 30px;
+	padding: 5px 15px 5px 15px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 
 }
-.circular:hover + .skinName {
-    text-shadow: 0 0 1px rgba(0, 0, 0, .8);
+
+#nickDialog {
+	color: #FF9A00;
+	width: 350px;
+	background: none;
+	border-top: none;
+	border-bottom: none;
+	margin: 10px auto;
+	border-radius: 30px;
+	padding: 5px 15px 5px 15px;
+	position: absolute;
+	top: 50%;
+	left: calc(20% - 20px);
+	transform: translate(-50%, -50%);
+
+}
+
+#cojarchyChat {
+	width: 500px;
+	background: none;
+	border-top: none;
+	border-bottom: none;
+	margin: 10px auto;
+	border-radius: 30px;
+	padding: 5px 15px 5px 15px;
+	position: absolute;
+	top: 70%;
+	left: calc(100% - 235px);
+	transform: translate(-50%, -50%);
+	height: 60%
+
+}
+
+iframe {
+	border: none;
+}
+
+#nickList {
+	color: white;
+	border-radius: 14px;
+	background: #fff1;
+	margin-top: 10px;
+	min-height: 100px;
+	max-width: 100%;
+	max-height: 700px;
+	min-width: 50%;
+}
+
+#access-group {
+	text-align: center;
+}
+
+center {
+	text-align: left;
+}
+
+hr {
+	border-top: solid 1px grey;
+}
+
+#chat_textbox {
+	transition: all .5s ease-in-out;
+	position: absolute;
+	z-index: 1;
+	bottom: 10px;
+	background: rgba(0, 0, 0, .2);
+	border: 0px;
+	outline: none;
+	color: #fff;
+	height: 30px;
+	text-indent: 12px;
+	left: 10px;
+	width: 300px;
+	font-family: "Ubuntu";
+}
+
+#chat_textbox:focus {
+	background: rgba(0, 0, 0, .5);
+}
+
+#footer {
+	text-align: center;
+	margin-bottom: 10px;
+	margin-top: -10px;
+}
+
+#play-btn {
+	width: 55%;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+#spectate-btn {
+	/*width: 13%;*/
+	float: right;
+	top: 0;
+}
+
+
+a {
+	color: #F75F1C;
+}
+.btn{
+	color: #FF9A00;
+	display: inline;
+	background: none;
+	border: solid 1px #FF9A00;
+	&:hover {
+		border: solid 1px white;
+		background: #fff1;
+	}
+}
+
+#gallery-btn {
+	width: 100%;
+	margin-bottom: 5px;
+	display: none; /* Visible when skins are loaded */
+}
+
+#touchpad, #touchCircle, #splitBtn, #ejectBtn {
+	position: fixed;
+}
+
+#touchpad, #splitBtn, #ejectBtn {
+	z-index: 2;
+}
+
+#touchpad {
+	background: #000;
+	opacity: 0.3;
+	width: 20vw;
+	height: 20vh;
+	left: 0;
+	bottom: 0;
+}
+
+#touchCircle {
+	width: 4vw;
+	height: 4vw;
+	border-radius: 2vw;
+	background: #f00;
+	opacity: 0.3;
+	z-index: 3;
+}
+
+#splitBtn, #ejectBtn {
+	width: 8vw;
+	height: 8vw;
+	border-radius: 4vw;
+	background: #777;
+	opacity: 0.5;
+}
+
+#splitBtn {
+	right: 18vw;
+	bottom: 0;
+}
+
+#ejectBtn {
+	bottom: 18vw;
+	right: 0;
+}
+
+#playSounds:checked + #soundsVolume {
+	display: inline;
+}
+
+#soundsVolume {
+	display: none;
+	width: 100px;
+	height: 18px;
+	padding: 0; /* IE fix */
+	vertical-align: middle;
+}
+
+#settings label {
+	margin-right: 10px;
+	user-select: none;
 }
