@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'custom-font'; /*a name to be used later*/
+    src: url('./fonts/deathmohawk.otf'); /*URL to font*/
+}
+
+
 html, body {
 	padding: 0;
 	margin: 0;
@@ -6,7 +12,7 @@ html, body {
 	width: 100%;
 	height: 100%;
 	position: fixed;
-	font-family: Consolas, Consolas
+	font-family: custom-font;
 }
 
 input[type=checkbox] {
