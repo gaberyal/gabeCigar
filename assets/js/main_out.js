@@ -1398,8 +1398,8 @@ exampleNick2
             ctx.restore();
         }
         drawShape(ctx) {
-            ctx.fillStyle = settings.showColor ? this.color.toHex() : '#FFFFFF';
-            ctx.strokeStyle = settings.showColor ? this.sColor.toHex() : '#E5E5E5';
+            ctx.fillStyle = settings.showColor ? '#F75F1C' : '#FFFFFF';
+            ctx.strokeStyle = settings.showColor ? '#F75F1C' : '#E5E5E5';
             ctx.lineWidth = Math.max(~~(this.s / 50), 10);
             if (this.s > 20) {
                 this.s -= ctx.lineWidth / 2;
