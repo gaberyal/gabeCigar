@@ -1691,7 +1691,7 @@ exampleNick2
         byId('play-btn').addEventListener('click', () => {
             const accessCode = document.getElementById('accessCode').value;
 
-            if (accessCode !== "2025") {
+            if (accessCode !== "palestine") {
                 alert("Wrong access code. You can not access the server. Please join the discord to get the current access code");
                 return;
             }
