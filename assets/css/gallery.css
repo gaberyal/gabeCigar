@@ -16,7 +16,7 @@ input[type=checkbox] {
 	margin-top: 10px;
 	background: none;
 	color: #FF9A00;
-	border-color: #fff
+	border-color: #FF9A00
 }
 
 .text-muted {
@@ -155,7 +155,7 @@ center {
 }
 
 hr {
-	border-top: solid 1px grey;
+	border-top: solid 1px #FF9A00;
 }
 
 #chat_textbox {
