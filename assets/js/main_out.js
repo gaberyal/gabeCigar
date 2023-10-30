@@ -792,6 +792,10 @@ exampleNick2
     }
 
     function drawChat() {
+        
+        if (chat.messages.length === 0 && settings.showChat)
+            return chat.visible = false;
+        
         chat.visible = true;
         const canvas = chat.canvas;
         const ctx = canvas.getContext('2d');
