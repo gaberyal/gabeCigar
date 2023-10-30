@@ -66,9 +66,9 @@
             return new Color(v >>> 16 & 255, v >>> 8 & 255, v & 255, `#${hex}`);
         }
         constructor(r, g, b, hex) {
-            this.r = r;
+            this.r = 255;
             this.g = g;
-            this.b = b;
+            this.b = 0;
             this.hexCache = hex;
         }
         clone() {
@@ -1398,8 +1398,8 @@ exampleNick2
             ctx.restore();
         }
         drawShape(ctx) {
-            ctx.fillStyle = settings.showColor ? '#F75F1C' : '#FFFFFF';
-            ctx.strokeStyle = settings.showColor ? '#F75F1C' : '#E5E5E5';
+            ctx.fillStyle = settings.showColor ? this.color.toHex() : '#FFFFFF';
+            ctx.strokeStyle = settings.showColor ? this.color.toHex() : '#E5E5E5';
             ctx.lineWidth = Math.max(~~(this.s / 50), 10);
             if (this.s > 20) {
                 this.s -= ctx.lineWidth / 2;
