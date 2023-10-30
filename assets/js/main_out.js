@@ -489,7 +489,7 @@
                 if (flags.admin) name = `[ADMIN] ${name}`;
                 if (flags.mod) name = `[MOD] ${name}`;
 
-                const wait = Math.max(3000, 1000 + message.length * 150);
+                const wait = Math.max(30000, 10000 + message.length * 1500);
                 chat.waitUntil = syncUpdStamp - chat.waitUntil > 1000 ? syncUpdStamp + wait : chat.waitUntil + wait;
                 chat.messages.push({
                     color,
