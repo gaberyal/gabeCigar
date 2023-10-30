@@ -1140,7 +1140,7 @@ exampleNick2
                 10);
         }
         if (settings.showChat && (chat.visible || isTyping)) {
-            mainCtx.globalAlpha = isTyping ? 1 : Math.max(1000 - syncAppStamp + chat.waitUntil, 0) / 1000;
+            mainCtx.globalAlpha = isTyping ? 1 : Math.max(1000 - syncAppStamp + chat.waitUntil, 0.5) / 1000;
             mainCtx.drawImage(
                 chat.canvas,
                 10 / camera.viewportScale,
