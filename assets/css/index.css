@@ -15,6 +15,9 @@ html, body {
 	font-family: Consolas;
 }
 
+a {
+	color: #F75F1C;
+}
 input[type=checkbox] {
 	cursor: pointer;
 }
