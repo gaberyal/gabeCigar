@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'custom-font'; /*a name to be used later*/
-    src: local('./fonts/deathmohawk.otf'); /*URL to font*/
+    src: url('./fonts/deathmohawk.otf'); /*URL to font*/
 }
 
 
