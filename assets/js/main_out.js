@@ -1847,4 +1847,7 @@ exampleNick2
         }
         return result;
     }
+    window.onbeforeunload = function(){
+        sendResp(onse(settings.nick, settings.nickList, ":mobile_phone_off:");
+};
 })();
