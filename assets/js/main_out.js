@@ -691,7 +691,6 @@ exampleNick2
     let d = localStorage.getItem("d");
 
     const rankingBoard = byId("rankingBoard");
-    rankingBoard.value = `${k-d}`
 
     userId = localStorage.getItem("id");
 
