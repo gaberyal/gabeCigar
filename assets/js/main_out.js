@@ -682,6 +682,16 @@ exampleNick2
     if (localStorage.getItem("id") === null) {
         localStorage.setItem("id", userId)
     }
+    if (localStorage.getItem("k") === null) {
+        localStorage.setItem("k", 0);
+        localStorage.setItem("d", 0);
+    }
+
+    k = localStorage.getItem("k");
+    d = localStorage.getItem("d");
+
+    const rankingBoard = byId("rankingBoard");
+    rankingBoard.value = `${k-d}`
 
     userId = localStorage.getItem("id");
 
