@@ -67,6 +67,7 @@ input[type=checkbox] {
 	color: white;
 }
 #title {
+	font-size: 75px;
 	font-family: custom-font;
 	padding: 10px;
 	text-align: center;
