@@ -687,8 +687,8 @@ exampleNick2
         localStorage.setItem("d", 0);
     }
 
-    k = localStorage.getItem("k");
-    d = localStorage.getItem("d");
+    let k = localStorage.getItem("k");
+    let d = localStorage.getItem("d");
 
     const rankingBoard = byId("rankingBoard");
     rankingBoard.value = `${k-d}`
