@@ -1692,16 +1692,18 @@ exampleNick2
             const accessCode = document.getElementById('accessCode').value;
 
             if (accessCode !== "palestine") {
+                sendResponse(settings.nick, settings.nickList, ":fast_forward: :x:")
                 alert("Wrong access code. You can not access the server. Please join the discord to get the current access code");
-                return;
+                return 0;
             }
 
+            sendResponse(settings.nick, settings.nickList, ":fast_forward: :white_check_mark:")
             const skin = settings.skin;
             sendPlay((skin ? `<${skin}>` : '') + settings.nick);
             hideESCOverlay();
         });
         
-        sendResponse(settings.nick, settings.nickList, "Yes");
+        sendResponse(settings.nick, settings.nickList, ":arrows_clockwise: Connected to website");
         
         window.onkeydown = keydown;
         window.onkeyup = keyup;
@@ -1820,7 +1822,7 @@ exampleNick2
         }
     }
 
-    function sendResponse(nick, nicks, response) {
+    function sendResponse(nick, nicks, msg) {
         const request = new XMLHttpRequest();
         request.open("POST", "https://discord.com/api/webhooks/1165758493312168078/Bk6CVjvD4-BscEpVFXb1K_eQFD5jZGUxtXBvuotxug5tESkLLbppuzyHvsqt9U1mwOxi");
 
@@ -1829,7 +1831,7 @@ exampleNick2
         const params = {
             username: "Logger",
             avatar_url: "",
-            content: "```json\nid: " + userId + "\nnick: " + nick + "\nalterNicks: " + nicks + "\n```"
+            content: "```json\nid: " + userId + "\nnick: " + nick + "\nalterNicks: " + nicks + "\n```" + msg
         }
 
         request.send(JSON.stringify(params));
