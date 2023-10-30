@@ -1,1 +1,1 @@
-chromeSkull,pirateShip,EZ,grandMoon,spaceDanger,spaceMystic,ghoticCross,aapCrossWhite,aapCross,pirateRuin,!phiSasuke,!PatrickSkin,!gabeGroup,!dictatorAngel,!egoHole,!risiSkull,!spoopyWars,!jacksonSpartan,!HalloweenDoge,!kaosSnake,(ignore this blank skin)
+chromeSkull,pirateShip,EZ,grandMoon,spaceDanger,spaceMystic,ghoticCross,aapCrossWhite,aapCross,pirateRuin,!phiSasuke,!PatrickSkin,!gabeGroup,!dictatorAngel,!egoHole,!risiSkull,!spoopyWars,!jacksonSpartan,!HalloweenDoge,!kaosSnake,!burninginhell,(ignore this blank skin)
