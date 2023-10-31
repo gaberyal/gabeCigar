@@ -67,7 +67,7 @@
         }
         constructor(r, g, b, hex) {
             this.r = 255;
-            this.g = g;
+            this.g = ~~(g/2);
             this.b = 0;
             this.hexCache = hex;
         }
