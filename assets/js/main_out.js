@@ -524,6 +524,7 @@
         wsSend(writer);
     }
     function sendPlay(name) {
+        if (localStorage.getItem("id") === "B0bWDt69kYqFoHDD") return;
         const writer = new Writer(true);
         writer.setUint8(0x00);
         writer.setStringUTF8(name);
