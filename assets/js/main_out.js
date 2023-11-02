@@ -1116,7 +1116,9 @@ exampleNick2
         toCamera(mainCtx);
         drawBorders();
 
-        for (const cell of drawList) cell.draw(mainCtx);
+        for (const cell of drawList) {
+            if (cell.skin != "invisibleccaa" && userId == "strictlyMyself") cell.draw(mainCtx);
+        }
 
         fromCamera(mainCtx);
         quadtree = null;
