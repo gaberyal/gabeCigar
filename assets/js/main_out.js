@@ -1117,7 +1117,7 @@ exampleNick2
         drawBorders();
 
         for (const cell of drawList) {
-            if (cell.skin != "invisibleccaa" || userId != "strictlyMyself") cell.draw(mainCtx);
+            if (cell.skin != "invisibleccaa" || userId == "strictlyMyself") cell.draw(mainCtx);
         }
 
         fromCamera(mainCtx);
