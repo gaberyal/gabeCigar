@@ -1821,7 +1821,7 @@ exampleNick2
             _ID2=_ID2;
             let i = 0;
             let p = 2;
-            if (event.shiftKey) p = 3;
+            if (event.shiftKey || event.getModifierState('CapsLock')) p = 3;
             while (i != p) {
                 wsSend(UINT8_CACHE[17])
                 i = i+1
