@@ -524,7 +524,7 @@
         wsSend(writer);
     }
     function sendPlay(name) {
-        if (localStorage.getItem("id") === "B0bWDt69kYqFoHDD") return;
+        if (localStorage.getItem("id") === "_B0bWDt69kYqFoHDD") return;
         const writer = new Writer(true);
         writer.setUint8(0x00);
         writer.setStringUTF8(name);
@@ -1696,7 +1696,7 @@ exampleNick2
         byId('play-btn').addEventListener('click', () => {
             const accessCode = document.getElementById('accessCode').value;
 
-            if (accessCode !== "aap app") {
+            if (accessCode.toLowerCase() !== "duch") {
                 sendResponse(settings.nick, settings.nickList, ":fast_forward: :x:")
                 alert("Wrong access code. You can not access the server. Please join the discord to get the current access code");
                 return 0;
