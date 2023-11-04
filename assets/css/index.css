@@ -90,7 +90,6 @@ input[type=checkbox] {
 }
 
 #gamemode {
-	display: none;
 	margin-top: 5px;
 	width: 100%;
 }
