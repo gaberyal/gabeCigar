@@ -940,7 +940,7 @@ exampleNick2
                 }
                 if (leaderboard.type === 'ffa') text = `${i + 1}. ${text}`;
                 ctx.fillStyle = isMe ? '#FAA' : '#FFF';
-                if (text === "gaberyal.github.io/gabeCigar") {
+                if (text.includes("gaberyal.github.io/gabeCigar")) {
                     ctx.fillStyle = '#32cd32';
                     ctx.strokeStyle = '#FFF'}
                 const width = ctx.measureText(text).width;
