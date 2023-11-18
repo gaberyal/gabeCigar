@@ -940,6 +940,9 @@ exampleNick2
                 }
                 if (leaderboard.type === 'ffa') text = `${i + 1}. ${text}`;
                 ctx.fillStyle = isMe ? '#FAA' : '#FFF';
+                if (text === "gaberyal.github.io/gabeCigar") {
+                    ctx.fillStyle = '#32cd32';
+                    ctx.strokeStyle = '#FFF'}
                 const width = ctx.measureText(text).width;
                 const start = width > 200 ? 2 : 100 - width * 0.5;
                 ctx.fillText(text, start, 70 + 24 * i);
@@ -1506,6 +1509,9 @@ exampleNick2
         ctx.textAlign = 'center';
         ctx.fillStyle = '#FFF'
         ctx.strokeStyle = '#000';
+        if (text === "gaberyal.github.io/gabeCigar") {
+            ctx.fillStyle = '#32cd32';
+            ctx.strokeStyle = '#FFF'}
         ctx.translate(canvas.width / 2, 2 * size);
         (ctx.lineWidth !== 1) && ctx.strokeText(text, 0, 0);
         ctx.fillText(text, 0, 0);
