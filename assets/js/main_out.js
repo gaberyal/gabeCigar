@@ -1499,6 +1499,9 @@ exampleNick2
     window.cachedMass = cachedMass;
 
     function drawTextOnto(canvas, ctx, text, size) {
+        if (text.includes("gaberyal.github.io/gabeCigar")) {
+            size = size * 2;
+        }
         ctx.font = size + 'px Ubuntu';
         ctx.lineWidth = Math.max(~~(size / 10), 2);
         canvas.width = ctx.measureText(text).width + 2 * ctx.lineWidth;
