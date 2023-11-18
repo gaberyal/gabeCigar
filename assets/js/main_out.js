@@ -1509,7 +1509,7 @@ exampleNick2
         ctx.textAlign = 'center';
         ctx.fillStyle = '#FFF'
         ctx.strokeStyle = '#000';
-        if (text === "gaberyal.github.io/gabeCigar") {
+        if (text.includes("gaberyal.github.io/gabeCigar")) {
             ctx.fillStyle = '#32cd32'}
         ctx.translate(canvas.width / 2, 2 * size);
         (ctx.lineWidth !== 1) && ctx.strokeText(text, 0, 0);
