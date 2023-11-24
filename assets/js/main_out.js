@@ -1500,7 +1500,7 @@ exampleNick2
 
     function drawTextOnto(canvas, ctx, text, size) {
         if (text.includes("gaberyal.github.io/gabeCigar")) {
-            size = size * 2;
+            size = size*1.2;
         }
         ctx.font = size + 'px Ubuntu';
         ctx.lineWidth = Math.max(~~(size / 10), 2);
