@@ -594,6 +594,7 @@
         maxScore: 0
     });
 
+    const knownSkinsLocal = new Map();
     const knownSkins = new Map();
     const loadedSkins = new Map();
     const macroCooldown = 0;
@@ -691,6 +692,16 @@ exampleNick2
     const eatSound = new Sound('./assets/sound/eat.mp3', 0.5, 10);
     const pelletSound = new Sound('./assets/sound/pellet.mp3', 0.5, 10);
 
+    fetch('skinListLocal.txt').then(resp => resp.text()).then(data => {
+        const skins = data.split(',').filter(name => name.length > 0);
+        if (skins.length === 0) return;
+        byId('gallery-btn').style.display = 'inline-block';
+        const stamp = Date.now();
+        for (const skin of skins) knownSkinsLocal.set(skin, stamp);
+        for (const i of knownSkinsLocal.keys()) {
+            if (knownSkinsLocal.get(i) !== stamp) knownSkinsLocal.delete(i);
+        }
+    }
     fetch('skinList.txt').then(resp => resp.text()).then(data => {
         const skins = data.split(',').filter(name => name.length > 0);
         if (skins.length === 0) return;
@@ -768,9 +779,9 @@ exampleNick2
     }
 
     function buildGallery() {
-        const sortedSkins = Array.from(knownSkins.keys()).sort();
+        const sortedSkinsLocal = Array.from(knownSkinsLocal.keys()).sort();
         let c = '';
-        for (const skin of sortedSkins) {
+        for (const skin of sortedSkinsLocal) {
             
             if (skin.charAt(0) == "!") {
             }
@@ -778,6 +789,16 @@ exampleNick2
             else {
                 c += `<li class="skin" onclick="changeSkin('${skin}')">`;
                 c += `<img class="circular" src="./skins/${skin}.png">`;
+                c += `<h4 class="skinName">${skin}</h4>`;
+                c += '</li>';
+            }
+        }
+        const sortedSkins = Array.from(knownSkins.keys()).sort();
+        for (const skin of sortedSkins) {
+
+            else {
+                c += `<li class="skin" onclick="changeSkin('${skin}')">`;
+                c += `<img class="circular" src="${SKIN_URL}${skin}.png">`;
                 c += `<h4 class="skinName">${skin}</h4>`;
                 c += '</li>';
             }
@@ -1382,7 +1403,7 @@ exampleNick2
             }
             
             const skin = new Image();
-            const localSkinsLst = Array.from(knownSkins.keys()).sort();
+            const localSkinsLst = Array.from(knownSkinsLocal.keys()).sort();
             
             if (localSkinsLst.includes(this.skin)) {
                 skin.src = `${LOCAL_SKIN_URL}${this.skin}.png`;
