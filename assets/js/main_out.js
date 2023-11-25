@@ -701,7 +701,8 @@ exampleNick2
         for (const i of knownSkinsLocal.keys()) {
             if (knownSkinsLocal.get(i) !== stamp) knownSkinsLocal.delete(i);
         }
-    }
+    });
+    
     fetch('skinList.txt').then(resp => resp.text()).then(data => {
         const skins = data.split(',').filter(name => name.length > 0);
         if (skins.length === 0) return;
