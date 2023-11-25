@@ -797,12 +797,10 @@ exampleNick2
         const sortedSkins = Array.from(knownSkins.keys()).sort();
         for (const skin of sortedSkins) {
 
-            else {
-                c += `<li class="skin" onclick="changeSkin('${skin}')">`;
-                c += `<img class="circular" src="${SKIN_URL}${skin}.png">`;
-                c += `<h4 class="skinName">${skin}</h4>`;
-                c += '</li>';
-            }
+            c += `<li class="skin" onclick="changeSkin('${skin}')">`;
+            c += `<img class="circular" src="${SKIN_URL}${skin}.png">`;
+            c += `<h4 class="skinName">${skin}</h4>`;
+            c += '</li>';
         }
         byId('gallery-body').innerHTML = `<ul id="skinsUL">${c}</ul>`;
     }
