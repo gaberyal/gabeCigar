@@ -98,7 +98,7 @@ input[type=checkbox] {
 #helloDialog {
 	width: 350px;
 	background-color:#000c;
-	border: solid 1px #666;
+	border: solid 1px #0;
 	border-top: none;
 	border-bottom: none;
 	margin: 10px auto;
@@ -113,7 +113,7 @@ input[type=checkbox] {
 }
 
 #nickDialog {
-	color: grey;
+	color: dimgrey;
 	width: 350px;
 	background: none;
 	border-top: none;
@@ -149,7 +149,7 @@ iframe {
 }
 
 #nickList {
-	color: white;
+	color: indianred;
 	border-radius: 14px;
 	background: #fff1;
 	margin-top: 10px;
@@ -214,7 +214,7 @@ hr {
 .btn{
 	display: inline;
 	background: none;
-	border: solid 1px grey;
+	border: solid 1px indianred;
 	&:hover {
 		border: solid 1px white;
 		background: #fff1;
