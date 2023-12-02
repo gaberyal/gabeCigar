@@ -245,8 +245,7 @@
     const KEY_TO_OPCODE = {
         e: UINT8_CACHE[22],
         r: UINT8_CACHE[23],
-        t: UINT8_CACHE[24],
-        p: UINT8_CACHE[25]
+        t: UINT8_CACHE[24]
     };
     const IE_KEYS = {
         spacebar: ' ',
