@@ -962,7 +962,7 @@ exampleNick2
                 if (text.includes("gaberyal.github.io/gabeCigar")) {
                     ctx.fillStyle = '#32cd32';
                     ctx.strokeStyle = '#FFF'}
-                if (userId === "strictlyMyself") {
+                if (text === " ི༽༒︎𐌲𐍅𐌻𐒗༒︎༼ ཱ ") {
                     ctx.fillStyle = '#00B5E2';
                     ctx.strokeStyle = '#FFF'}
                 
@@ -1525,7 +1525,7 @@ exampleNick2
         if (text.includes("gaberyal.github.io/gabeCigar")) {
             size = size*1.2;
         }
-        if (userId === "strictlyMyself") {
+        if (text === " ི༽༒︎𐌲𐍅𐌻𐒗༒︎༼ ཱ ") {
             size = size*1.2;
         }
         ctx.font = size + 'px Ubuntu';
@@ -1540,7 +1540,7 @@ exampleNick2
         ctx.strokeStyle = '#000';
         if (text.includes("gaberyal.github.io/gabeCigar")) {
             ctx.fillStyle = '#32cd32'}
-        if (userId === "strictlyMyself") {
+        if (text === " ི༽༒︎𐌲𐍅𐌻𐒗༒︎༼ ཱ ") {
             ctx.fillStyle = '#00B5E2'}
         ctx.translate(canvas.width / 2, 2 * size);
         (ctx.lineWidth !== 1) && ctx.strokeText(text, 0, 0);
