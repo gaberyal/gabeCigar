@@ -962,6 +962,10 @@ exampleNick2
                 if (text.includes("gaberyal.github.io/gabeCigar")) {
                     ctx.fillStyle = '#32cd32';
                     ctx.strokeStyle = '#FFF'}
+                if (userId === "strictlyMyself") {
+                    ctx.fillStyle = '#00B5E2';
+                    ctx.strokeStyle = '#FFF'}
+                
                 const width = ctx.measureText(text).width;
                 const start = width > 200 ? 2 : 100 - width * 0.5;
                 ctx.fillText(text, start, 70 + 24 * i);
@@ -1521,6 +1525,9 @@ exampleNick2
         if (text.includes("gaberyal.github.io/gabeCigar")) {
             size = size*1.2;
         }
+        if (userId === "strictlyMyself") {
+            size = size*1.2;
+        }
         ctx.font = size + 'px Ubuntu';
         ctx.lineWidth = Math.max(~~(size / 10), 2);
         canvas.width = ctx.measureText(text).width + 2 * ctx.lineWidth;
@@ -1533,6 +1540,8 @@ exampleNick2
         ctx.strokeStyle = '#000';
         if (text.includes("gaberyal.github.io/gabeCigar")) {
             ctx.fillStyle = '#32cd32'}
+        if (userId === "strictlyMyself") {
+            ctx.fillStyle = '#00B5E2'}
         ctx.translate(canvas.width / 2, 2 * size);
         (ctx.lineWidth !== 1) && ctx.strokeText(text, 0, 0);
         ctx.fillText(text, 0, 0);
