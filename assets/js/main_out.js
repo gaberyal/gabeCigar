@@ -1437,7 +1437,7 @@ exampleNick2
             if (this.skin === "Guts" || this.skin === "!FullWhite") {
                 ctx.strokeStyle = '#FFFFFF';
                 ctx.fillStyle = '#FFFFFF';
-                this.setColor(new Color(255, 255, 255);
+                this.setColor(new Color(255, 255, 255));
             }
             if (this.skin === "berserkGriffith" || this.skin === "!FullBlack") {
                 ctx.strokeStyle = '#000000';
