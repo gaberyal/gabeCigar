@@ -1434,8 +1434,16 @@ exampleNick2
         drawShape(ctx) {
             ctx.fillStyle = settings.showColor ? this.color.toHex() : '#FFFFFF';
             ctx.strokeStyle = settings.showColor ? this.color.toHex() : '#E5E5E5';
-            if (this.skin === "Guts") {ctx.strokeStyle = '#FFFFFF';}
-            if (this.skin === "berserkGriffith") {ctx.strokeStyle = '#000000';}
+            if (this.skin === "Guts" || this.skin === "!FullWhite") {
+                ctx.strokeStyle = '#FFFFFF';
+                ctx.fillStyle = '#FFFFFF';
+                this.setColor(new Color(255, 255, 255);
+            }
+            if (this.skin === "berserkGriffith" || this.skin === "!FullBlack") {
+                ctx.strokeStyle = '#000000';
+                ctx.fillStyle = '#000000';
+                this.setColor(new Color(0, 0, 0);
+            }
             ctx.lineWidth = Math.max(~~(this.s / 50), 10);
             if (this.s > 20) {
                 this.s -= ctx.lineWidth / 2;
