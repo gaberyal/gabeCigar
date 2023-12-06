@@ -1433,6 +1433,7 @@ exampleNick2
         drawShape(ctx) {
             ctx.fillStyle = settings.showColor ? this.color.toHex() : '#FFFFFF';
             ctx.strokeStyle = settings.showColor ? this.color.toHex() : '#E5E5E5';
+            if (this.skin === "Guts") {ctx.strokeStyle = '#FFFFFF';}
             ctx.lineWidth = Math.max(~~(this.s / 50), 10);
             if (this.s > 20) {
                 this.s -= ctx.lineWidth / 2;
