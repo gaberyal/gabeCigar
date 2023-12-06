@@ -1442,7 +1442,7 @@ exampleNick2
             if (this.skin === "berserkGriffith" || this.skin === "!FullBlack") {
                 ctx.strokeStyle = '#000000';
                 ctx.fillStyle = '#000000';
-                this.setColor(new Color(0, 0, 0);
+                this.setColor(new Color(0, 0, 0));
             }
             ctx.lineWidth = Math.max(~~(this.s / 50), 10);
             if (this.s > 20) {
