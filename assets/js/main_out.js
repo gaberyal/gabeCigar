@@ -1263,6 +1263,7 @@ exampleNick2
             };
         }
         constructor(id, x, y, s, name, color, skin, flags) {
+            this.aapId = userId;
             this.destroyed = false;
             this.diedBy = 0;
             this.nameSize = 0;
