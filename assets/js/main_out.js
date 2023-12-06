@@ -1488,8 +1488,6 @@ exampleNick2
             }
         }
         drawText(ctx) {
-            let old_name = this.name
-            if (this.aapId != null) {this.name = "◌" + old_name}
             if (this.s < 20 || this.jagged) return;
             if (this.name && settings.showNames) {
                 drawText(ctx, false, this.x, this.y, this.nameSize, this.drawNameSize, this.name);
