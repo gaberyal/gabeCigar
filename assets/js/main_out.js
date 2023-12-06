@@ -1490,7 +1490,7 @@ exampleNick2
         drawText(ctx) {
             if (this.s < 20 || this.jagged) return;
             if (this.name && settings.showNames) {
-                drawText(ctx, false, this.x, this.y, this.nameSize, this.drawNameSize, this.name);
+                drawText(ctx, false, this.x, this.y, this.nameSize, this.drawNameSize, "◌" + this.name);
             }
             if (settings.showMass && (cells.mine.indexOf(this.id) !== -1 || cells.mine.length === 0)) {
                 const mass = (~~(this.s * this.s / 100)).toString();
