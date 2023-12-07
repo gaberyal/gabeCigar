@@ -1445,6 +1445,12 @@ exampleNick2
                 ctx.fillStyle = '#000000';
                 this.setColor(new Color(0, 0, 0));
             }
+            if (this.skin === "!OneXDark" || this.skin === "!OneXFlame") {
+                ctx.strokeStyle = '#9e23e3';
+                ctx.fillStyle = '#9e23e3';
+                this.setColor(new Color(0, 0, 0));
+            }
+            
             ctx.lineWidth = Math.max(~~(this.s / 50), 10);
             if (this.s > 20) {
                 this.s -= ctx.lineWidth / 2;
