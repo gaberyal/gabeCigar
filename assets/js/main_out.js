@@ -1555,7 +1555,7 @@ exampleNick2
         if (text.includes("gaberyal.github.io/gabeCigar")) {
             ctx.fillStyle = '#32cd32'}
         if (text.toLowerCase().includes("aap")) {
-            ctx.fillStyle = '#FF0000';
+            ctx.fillStyle = '#DF0000';
             ctx.strokeStyle = '#400000';
         }
 
