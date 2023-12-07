@@ -479,6 +479,7 @@
                     mod: !!(flagMask & 0x20),
                 };
                 const color = new Color(reader.getUint8(), reader.getUint8(), reader.getUint8());
+                if
                 const rawName = reader.getStringUTF8();
                 const message = reader.getStringUTF8();
 
