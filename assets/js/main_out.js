@@ -1556,7 +1556,7 @@ exampleNick2
             ctx.fillStyle = '#32cd32'}
         if (text.toLowerCase().includes("aap")) {
             ctx.fillStyle = '#FF0000';
-            ctx.strokeStyle = '#610000';
+            ctx.strokeStyle = '#400000';
         }
 
         ctx.translate(canvas.width / 2, 2 * size);
