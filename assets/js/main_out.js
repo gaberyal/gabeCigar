@@ -963,8 +963,8 @@ exampleNick2
                     ctx.fillStyle = '#32cd32';
                     ctx.strokeStyle = '#FFF'}
                 if (text.toLowerCase().includes("aap")) {
-                    ctx.fillStyle = '#8b0000';
-                    ctx.strokeStyle = '#FFFFFF';
+                    ctx.fillStyle = '#FF0000';
+                    ctx.strokeStyle = '#FF0000';
                 }
                 
                 const width = ctx.measureText(text).width;
@@ -1556,7 +1556,7 @@ exampleNick2
             ctx.fillStyle = '#32cd32'}
         if (text.toLowerCase().includes("aap")) {
             ctx.fillStyle = '#8b0000';
-            ctx.strokeStyle = '#FFFFFF';
+            ctx.strokeStyle = '#FF0000';
         }
 
         ctx.translate(canvas.width / 2, 2 * size);
