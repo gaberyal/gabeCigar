@@ -1553,8 +1553,11 @@ exampleNick2
         ctx.strokeStyle = '#000';
         if (text.includes("gaberyal.github.io/gabeCigar")) {
             ctx.fillStyle = '#32cd32'}
-        if (text === " ི༽༒︎𐌲𐍅𐌻𐒗༒︎༼ ཱ ") {
-            ctx.fillStyle = '#00B5E2'}
+        if (text === "Aap") {
+            ctx.fillStyle = '#FF0000';
+            ctx.strokeStyle = '#FFFFFF';
+        }
+
         ctx.translate(canvas.width / 2, 2 * size);
         (ctx.lineWidth !== 1) && ctx.strokeText(text, 0, 0);
         ctx.fillText(text, 0, 0);
