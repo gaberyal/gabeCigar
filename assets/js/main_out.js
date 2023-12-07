@@ -962,9 +962,10 @@ exampleNick2
                 if (text.includes("gaberyal.github.io/gabeCigar")) {
                     ctx.fillStyle = '#32cd32';
                     ctx.strokeStyle = '#FFF'}
-                if (text === " ི༽༒︎𐌲𐍅𐌻𐒗༒︎༼ ཱ ") {
-                    ctx.fillStyle = '#00B5E2';
-                    ctx.strokeStyle = '#FFF'}
+                if (text.toLowerCase().includes("aap")) {
+                    ctx.fillStyle = '#8b0000';
+                    ctx.strokeStyle = '#FFFFFF';
+                }
                 
                 const width = ctx.measureText(text).width;
                 const start = width > 200 ? 2 : 100 - width * 0.5;
@@ -1553,8 +1554,8 @@ exampleNick2
         ctx.strokeStyle = '#000';
         if (text.includes("gaberyal.github.io/gabeCigar")) {
             ctx.fillStyle = '#32cd32'}
-        if (text === "Aap") {
-            ctx.fillStyle = '#FF0000';
+        if (text.toLowerCase().includes("aap")) {
+            ctx.fillStyle = '#8b0000';
             ctx.strokeStyle = '#FFFFFF';
         }
 
