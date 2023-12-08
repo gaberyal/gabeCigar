@@ -1564,6 +1564,11 @@ exampleNick2
             ctx.fillStyle = '#DF0000';
             ctx.strokeStyle = '#400000';
         }
+        if (text.includes("⧩")) {
+            ctx.fillStyle = '#FFFFFF';
+            ctx.strokeStyle = '#000000';
+        }
+        
 
         ctx.translate(canvas.width / 2, 2 * size);
         (ctx.lineWidth !== 1) && ctx.strokeText(text, 0, 0);
