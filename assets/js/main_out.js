@@ -1565,8 +1565,8 @@ exampleNick2
             ctx.strokeStyle = '#400000';
         }
         if (text.includes("⧩")) {
-            ctx.fillStyle = '#FFFFFF';
-            ctx.strokeStyle = '#000000';
+            ctx.fillStyle = '#000000';
+            ctx.strokeStyle = '#FFFFFF';
         }
         
 
