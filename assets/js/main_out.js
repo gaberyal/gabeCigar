@@ -1294,13 +1294,13 @@ exampleNick2
             cells.byId.delete(this.id);
             if (cells.mine.remove(this.id) && cells.mine.length === 0) showESCOverlay();
             this.destroyed = true;
-
+/*
             if (!cells.mine.includes(this.id) {
                 if (cells.mine.includes(killerId)) {
                     console.log("+1")
                 }
             }
-            
+*/
             this.dead = syncUpdStamp;
             if (killerId && !this.diedBy) {
                 this.diedBy = killerId;
