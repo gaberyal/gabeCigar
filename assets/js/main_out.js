@@ -10,6 +10,15 @@
     function byId(id) {
         return document.getElementById(id);
     }
+
+    function showskins(skin) {
+        return skin
+    }
+
+    function hideskin(skin) {
+        return skin
+    }
+    
     /*
     function byClass(clss, parent) {
         return (parent || document).getElementsByClassName(clss);
