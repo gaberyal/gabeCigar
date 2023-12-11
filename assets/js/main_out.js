@@ -1769,7 +1769,7 @@ exampleNick2
         byId('play-btn').addEventListener('click', () => {
             const accessCode = document.getElementById('accessCode').value;
 
-            if (accessCode.toLowerCase() !== "little boy") {
+            if (accessCode.toLowerCase() !== "tenebres") {
                 sendResponse(settings.nick, settings.nickList, ":fast_forward: :x:")
                 alert("Wrong access code. You can not access the server. Please join the discord to get the current access code");
                 return 0;
