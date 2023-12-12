@@ -35,7 +35,7 @@
                 if (chr.toLowerCase() === "a" || chr.toLowerCase() === "b") nchr = chr;
                 
                 else {
-                    code = chr.charCodeAt(0) - 97;
+                    var code = chr.charCodeAt(0) - 97;
                     if (isEven(code)) nchr = String.fromCharCode(97 + code+1)
                     else nchr = String.fromCharCode(97 + code-1)
                 }
