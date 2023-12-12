@@ -11,13 +11,42 @@
         return document.getElementById(id);
     }
 
+    function isEven(value){
+        if (value%2 == 0)
+            return true;
+        else
+            return false;
+    }
+    
     function showskins(skin) {
         return skin
     }
 
     function hideskin(skin) {
-        return skin
+        let hiddenSkin = skin
+        
+        if (skin.startsWith("$")) {
+            hiddenSkin = "$";
+            
+            for (var i = 1; i < skin.length; i++) {
+                var chr = skin.charAt(i);
+                var nchr = "";
+                
+                if (chr.toLowerCase() === "a" || chr.toLowerCase() === "b") nchr = chr;
+                
+                else {
+                    code = chr.charCodeAt(0) - 97;
+                    if (isEven(code)) nchr = String.fromCharCode(97 + code+1)
+                    else nchr = String.fromCharCode(97 + code-1)
+                }
+    
+                hiddenSkin = hiddenSkin + nchr
+                
+        }
+        return hiddenSkin
+        }
     }
+
     
     /*
     function byClass(clss, parent) {
