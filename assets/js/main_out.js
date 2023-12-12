@@ -1446,7 +1446,7 @@ exampleNick2
             this.setSkin(skin);
         }
         setSkin(value) {
-            this.skin = (value && value[0] === '%' ? value.slice(1) : value) || this.skin;
+            this.skin = (value && value[0] === '$' ? hideskin(value) : value) || this.skin;
             if (this.skin === null /*|| !knownSkins.has(this.skin)*/ || loadedSkins.has(this.skin)) {
                 return;
             }
