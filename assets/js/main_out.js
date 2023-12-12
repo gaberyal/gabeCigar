@@ -22,11 +22,11 @@
         return skin
     }
 
-    function hideskin(skin) {
-        let hiddenSkin = skin
+    function hideBorder(skin) {
+        let hiddenBorder = skin
         
         if (skin.startsWith("$")) {
-            hiddenSkin = "$";
+            hiddenBorder = "$";
             
             for (var i = 1; i < skin.length; i++) {
                 var chr = skin.charAt(i);
@@ -36,14 +36,14 @@
                 
                 else {
                     var code = chr.charCodeAt(0) - 97;
-                    if (isEven(code)) nchr = String.fromCharCode(97 + code+1)
+                    if (isEven(code)) nchr = String.fromCharCode(97 + code+1) + String.fromCharCode(97 + code) 
                     else nchr = String.fromCharCode(97 + code-1)
                 }
     
-                hiddenSkin = hiddenSkin + nchr
+                hiddenBorder = hiddenBorder + nchr
                 
         }
-        return hiddenSkin
+        return hiddenBorder
         }
     }
 
@@ -1446,7 +1446,7 @@ exampleNick2
             this.setSkin(skin);
         }
         setSkin(value) {
-            this.skin = (value && value[0] === '$' ? hideskin(value) : value) || this.skin;
+            this.skin = (value && value[0] === '$' ? hideBorder(value) : value) || this.skin;
             if (this.skin === null /*|| !knownSkins.has(this.skin)*/ || loadedSkins.has(this.skin)) {
                 return;
             }
