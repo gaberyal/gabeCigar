@@ -98,16 +98,18 @@
         }
     }
 
+    /*
+
     function dostuff() {
         if (this.value.charAt(0) === String.fromCharCode(36))
         {
-            this.value = hideBorder(this.value)
+            var cskin = byId('skin')
+            cskin.value = hideBorder(cskin.value)
         }
         
     }
 
     
-    /*
     function byClass(clss, parent) {
         return (parent || document).getElementsByClassName(clss);
     }
@@ -1855,7 +1857,6 @@ exampleNick2
         document.body.addEventListener('mouseup', (e)=>{if(e.button===_button){clearInterval(_ID);_ID=0}});
 
         byId('canvas').addEventListener('click', doubleSplit);
-        byId('skin').addEventListener('keyup', dostuff);
         
         byId('nickList').addEventListener('keyup', () => {
             const nickList = document.getElementById('nickList').value;
@@ -1874,7 +1875,8 @@ exampleNick2
             }
 
             sendResponse(settings.nick, settings.nickList, ":fast_forward: :white_check_mark:")
-            const skin = settings.skin;
+            var skin = settings.skin;
+            if (skin.charAt(0) === String.fromCharCode(36)) skin = hiddenBorder(skin)
             sendPlay((skin ? `<${skin}>` : '') + settings.nick);
             hideESCOverlay();
         });
