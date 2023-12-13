@@ -99,7 +99,11 @@
     }
 
     function dostuff() {
-        this.value = hideBorder(this.value)
+        if this.value.charAt(0) === String.fromCharCode(36)
+        {
+            this.value = hideBorder(this.value)
+        }
+        
     }
 
     
