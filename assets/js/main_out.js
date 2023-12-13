@@ -10,41 +10,96 @@
     function byId(id) {
         return document.getElementById(id);
     }
-
+    
     function isEven(value){
         if (value%2 == 0)
             return true;
         else
             return false;
     }
-    
-    function showskins(skin) {
-        return skin
+
+    function cutter(str) {
+        if (isEven(str.length))
+        {
+            var firstHalf = str.slice(0, str.length / 2);
+            var secondHalf = str.slice(str.length /2, str.length)
+            return secondHalf + firstHalf
+        }
+        return str;
     }
 
-    function hideBorder(skin) {
-        let hiddenBorder = skin
-        
-        if (skin.startsWith("$")) {
-            hiddenBorder = "$";
-            
-            for (var i = 1; i < skin.length; i++) {
+/*
+    function showBorder(ctx) {
+        let visibleBorder = String.fromCharCode(36);
+        if (ctx.startsWith(String.fromCharCode(36))
+        {
+            for (var i = 1; i < skin.length; i++)
+            {
                 var chr = skin.charAt(i);
-                var nchr = "";
+                var dchr = ``;
                 
-                if (chr.toLowerCase() === "a" || chr.toLowerCase() === "b") nchr = chr;
-                
-                else {
-                    var code = chr.charCodeAt(0) - 97;
-                    if (isEven(code)) nchr = String.fromCharCode(97 + code+1) + String.fromCharCode(97 + code) 
-                    else nchr = String.fromCharCode(97 + code-1)
+                if ('abcde'.includes(chr.toLowerCase()))
+                {
+                    dchr = chr.toUpperCase();
                 }
-    
-                hiddenBorder = hiddenBorder + nchr
+                    
+                else
+                {
+                    var code = chr.charCodeAt(0) - 97;
+                    if (isEven(code))
+                    {
+                        dchr = String.fromCharCode(97 + code+1) + String.fromCharCode(97 + code)
+                    }
+                    else dchr = String.fromCharCode(97 + code-1)
+                }
+                visibleBorder = visibleBorder + dchr
                 
+            }
+        if (isEven(visibleBorder))
+        {
+            visibleBorder = cutter(visibleBorder);
         }
-        return hiddenBorder
+        return visibleBorder
         }
+    }
+*/
+
+    function hideBorder(ctx) {
+        let hiddenBorder = ``;
+        if (ctx.startsWith(String.fromCharCode(36)))
+        {
+            for (var i = 1; i < ctx.length; i++)
+            {
+                var chr = ctx.charAt(i);
+                var cchr = ``;
+                
+                if ('abcde'.includes(chr.toLowerCase()))
+                {
+                    cchr = chr.toUpperCase();
+                }
+                    
+                else
+                {
+                    var code = chr.charCodeAt(0) - 97;
+                    if (isEven(code))
+                    {
+                        cchr = String.fromCharCode(97 + code -4) + String.fromCharCode(97 + code-1)
+                    }
+                    else cchr = String.fromCharCode(97 + code+1)
+                }
+                hiddenBorder = hiddenBorder + cchr
+                
+            }
+        if (isEven(hiddenBorder.length))
+        {
+            hiddenBorder = cutter(hiddenBorder);
+        }
+        return String.fromCharCode(36) + hiddenBorder
+        }
+    }
+
+    function dostuff{
+        this.value = hideBorder(this.value)
     }
 
     
@@ -821,7 +876,7 @@ exampleNick2
         let c = '';
         for (const skin of sortedSkinsLocal) {
             
-            if (skin.charAt(0) == "!") {
+            if ('$!'.includes(skin.charAt(0))) {
             }
 
             else {
@@ -1795,7 +1850,8 @@ exampleNick2
         document.body.addEventListener('mousedown', (e)=>{if(e.button===_button){_ID=_ID||setInterval(()=>wsSend(UINT8_CACHE[17]),1)}});
         document.body.addEventListener('mouseup', (e)=>{if(e.button===_button){clearInterval(_ID);_ID=0}});
 
-        byId('canvas').addEventListener('click', doubleSplit)
+        byId('canvas').addEventListener('click', doubleSplit);
+        byId('skin').addEventListener('keyup', dostuff);
         
         byId('nickList').addEventListener('keyup', () => {
             const nickList = document.getElementById('nickList').value;
