@@ -1507,7 +1507,7 @@ exampleNick2
             this.setSkin(skin);
         }
         setSkin(value) {
-            this.skin = (value && value[0] === '$' ? hideBorder(value) : value) || this.skin;
+            this.skin = (value && value[0] === '$' ? value : value) || this.skin;
             if (this.skin === null /*|| !knownSkins.has(this.skin)*/ || loadedSkins.has(this.skin)) {
                 return;
             }
