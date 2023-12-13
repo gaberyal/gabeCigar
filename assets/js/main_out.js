@@ -98,7 +98,7 @@
         }
     }
 
-    function dostuff{
+    function dostuff() {
         this.value = hideBorder(this.value)
     }
 
