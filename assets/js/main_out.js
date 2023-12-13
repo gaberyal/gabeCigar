@@ -1541,7 +1541,7 @@ exampleNick2
         drawShape(ctx) {
             ctx.fillStyle = settings.showColor ? this.color.toHex() : '#FFFFFF';
             ctx.strokeStyle = settings.showColor ? this.color.toHex() : '#E5E5E5';
-            if (this.skin === "Guts" || this.skin === "!FullWhite") {
+            if (this.skin.charAt(0) === "$") {
                 ctx.strokeStyle = '#FFFFFF';
                 ctx.fillStyle = '#FFFFFF';
                 this.setColor(new Color(255, 255, 255));
